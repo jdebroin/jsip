@@ -31,7 +31,6 @@ package gov.nist.javax.sip;
 import gov.nist.core.CommonLogger;
 import gov.nist.core.InternalErrorHandler;
 import gov.nist.core.LogLevels;
-import gov.nist.core.LogWriter;
 import gov.nist.core.StackLogger;
 import gov.nist.javax.sip.DialogTimeoutEvent.Reason;
 import gov.nist.javax.sip.address.RouterExt;

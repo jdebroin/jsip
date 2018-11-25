@@ -4,18 +4,26 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>javax.sip</groupId>
-		<version>1.2.0</version>
+		<version>1.2.0-JDB</version>
 		<artifactId>jain-sip</artifactId>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
 	<groupId>javax.sip</groupId>
 	<artifactId>jain-sip-ri</artifactId>
-	<version>1.2.X-SNAPSHOT</version>
+	<version>1.2.0-JDB</version>
 	<packaging>jar</packaging>
 
 	<name>jain-sip-ri</name>
 	<url>http://code.google.com/p/jain-sip/</url>
+
+	<properties>
+            <maven.compiler.source>1.8</maven.compiler.source>
+            <maven.compiler.target>1.8</maven.compiler.target>
+
+            <slf4j.version>1.7.25</slf4j.version>
+	</properties>
+
 	<build>
 		<sourceDirectory>../../src</sourceDirectory>
 		<plugins>
@@ -144,17 +152,17 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.14</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
 			<groupId>javax.sip</groupId>
 			<artifactId>jain-sip-api</artifactId>
 			<version>1.2.0</version>
 			<scope>provided</scope>
 		</dependency>
+                <dependency>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                    <version>${slf4j.version}</version>
+                </dependency>
+
 	</dependencies>
 
 	<!-- repositories -->

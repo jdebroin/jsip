@@ -1783,37 +1783,6 @@ public class SipStackImpl extends SIPTransactionStack implements
 		return super.logRecordFactory;
 	}
 
-	/**
-	 * Set the log appender ( this is useful if you want to specify a particular
-	 * log format or log to something other than a file for example). This method
-	 * is will be removed May 11, 2010 or shortly there after.
-	 * 
-	 * @param Appender
-	 *            - the log4j appender to add.
-	 * @deprecated TODO: remove this method May 11, 2010.
-	 */
-	@Deprecated
-	public void addLogAppender(org.apache.log4j.Appender appender) {
-		if (this.logger instanceof gov.nist.core.LogWriter) {
-			((gov.nist.core.LogWriter) this.logger).addAppender(appender);
-		}
-	}
-
-	/**
-	 * Get the log4j logger ( for log stream integration ).
-	 * This method will be removed May 11, 2010 or shortly there after.
-	 * 
-	 * @return  the log4j logger.
-	 * @deprecated TODO: This method will be removed May 11, 2010.
-	 */
-	@Deprecated
-	public org.apache.log4j.Logger getLogger() {
-		if (this.logger instanceof gov.nist.core.LogWriter) {
-			return ((gov.nist.core.LogWriter) this.logger).getLogger();
-		}
-		return null;
-	}
-
 	public EventScanner getEventScanner() {
 		return eventScanner;
 	}
